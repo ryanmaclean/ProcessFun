@@ -1,6 +1,6 @@
 # ProcessFun
 
-## HTTPd Count Shell Script
+## HTTPd Count Shell Script (httpdcount.sh)
 
 Counts either httpd or apache2 (uncomment the service required) processes and:
  - Prints messages to screen at counts of 1~10, 20~99 and 100+
