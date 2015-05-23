@@ -11,10 +11,10 @@ numrunning=`ps cax | grep $command | wc -l`
 #Send text to console depending on ammount of running processes
 
 #First case: between 1 and 10
-if [ $numrunning >= 1 && $numrunning <= 10 ]; then display="[LOW] Web Server OK!";
+if [ $numrunning >= 1 -a $numrunning <= 10 ]; then display="[LOW] Web Server OK!";
 
 #Second case: between 20 and 99
-elif [ $numrunning >= 20 && $numrunning < 100 ]; then display="[HIGH] Web Server Working hard!";
+elif [ $numrunning >= 20 -a $numrunning < 100 ]; then display="[HIGH] Web Server Working hard!";
 
 #Third case: 100 processes or more
 elif [ $numrunning >= 100 ]; then display="[CRITICAL] Web Server under heavy load, restart required";
