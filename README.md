@@ -10,7 +10,7 @@ Counts either httpd or apache2 (uncomment the service required) processes and:
 
 ### Running the Script
 1. In order to run the script, download the raw code [here] (https://raw.githubusercontent.com/ryanmaclean/ProcessFun/master/httpdcount.sh) 
-2. On a Mac, make sure that you don't append the "txt" extension to the file once saved. 
+2. On a Mac with Safari, make sure that you don't append the "txt" extension to the file once saved. 
 3. Add the executable bit to the script <pre>chmod +x httpdcount.sh</pre>
 4. Run the command using sudo: <pre>sudo ./httpdcount.sh</pre>
 
