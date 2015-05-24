@@ -37,8 +37,8 @@ The results are output to a JSON file, then parsed by a script to create an HTML
 ### Requirements
 This script is built using the Amazon AWS CLI and uses Python/Ruby to output to the HTML file. You will need to have the command line tools installed and configured prior to running the script.
 
-####Install the [AWS CLI] (http://aws.amazon.com/cli/):
-The easiest way is with Python pip
+####Install the [AWS CLI] (http://aws.amazon.com/cli/)
+The easiest way is with Python pip:
 <pre>wget https://bootstrap.pypa.io/get-pip.py && sudo python get-pip.py</pre>
 
 Once pip is installed, you can grab the AWS CLI and install it easily: 
