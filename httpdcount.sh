@@ -14,7 +14,7 @@ restart=false
 numrunning=`ps cax | grep $command | wc -l`
 
 #Send text to console depending on ammount of running processes
-
+#--------------------------------------------------------------
 #First case: between 1 and 10
 if [ $numrunning -ge 1 -a $numrunning -lt 10 ]; then 
 	display="[LOW] Web Server OK!";
@@ -30,11 +30,12 @@ elif [ $numrunning -gt 20 -a $numrunning -le 100 ]; then
 elif [ $numrunning -gt 100 ]; then 
 	display="[CRITICAL] Web Server under heavy load, restart required";
 	restart=true
-
+	
 else
 #Exit gracefully if between 10 and 20
 exit 0;
 fi
+#--------------------------------------------------------------
 
 #Restart service if required
 if $restart; then
