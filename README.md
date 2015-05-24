@@ -9,10 +9,7 @@ Counts either httpd or apache2 (uncomment the service required) processes and:
  - Will restart the service based on the variable if over 100
 
 ### Running the Script
-1. In order to run the script, download the raw code [here] (https://raw.githubusercontent.com/ryanmaclean/ProcessFun/master/httpdcount.sh) 
-2. On a Mac with Safari, make sure that you don't append the "txt" extension to the file once saved. 
-3. Add the executable bit to the script <pre>chmod +x httpdcount.sh</pre>
-4. Run the command using sudo: <pre>sudo ./httpdcount.sh</pre>
+1. In order to run the script, download the raw code and pipe it to Bash <pre> curl -L https://raw.githubusercontent.com/ryanmaclean/ProcessFun/master/httpdcount.sh | sudo bash</pre> 
 
 ### Resources
 If you'd like to make a similar script, or to fork and modify this for your own needs, here are the resources I used:
