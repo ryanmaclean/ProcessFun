@@ -24,7 +24,7 @@ If you'd like to make a similar script, or to fork and modify this for your own 
  
 
 
-## AWS Inventory (awsinv.sh)
+## AWS Inventory (awsinv.sh and awsinvhtml.py)
 A simple script to check the inventory of the following in the "us-east-1" region:
  - EC2 
  - RDS 
