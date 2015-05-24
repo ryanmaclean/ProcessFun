@@ -44,5 +44,18 @@ The easiest way is with Python pip:
 Once pip is installed, you can grab the AWS CLI and install it easily: 
 <pre>sudo pip install awscli</pre>
 
-To upgrade the CLI at any time: 
-<pre>sudo pip install --upgrade awscli</pre>
+#### Configure AWS CLI
+Run the configuration steps:
+<pre>aws configure</pre>
+
+You will be asked to input your Access Key (Type it in, then press enter):
+<pre>AWS Access Key ID [None]:</pre>
+
+And your secret key:
+<pre>AWS Secret Access Key [None]:</pre>
+
+The follwowing can be left blank as we will define output and region on each run:
+```
+Default region name [None]:
+Default output format [None]:
+```
