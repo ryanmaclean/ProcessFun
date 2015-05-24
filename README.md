@@ -33,3 +33,6 @@ A simple script to check the inventory of the following in the "us-east-1" regio
  - Cloudformation
 
 The results are output to a JSON file, then parsed by a script to create an HTML page.
+
+### Requirements
+This script is built using the Amazon EC2 Command Line Tools and uses Python/Ruby to output to the HTML file. You will need to have the command line tools installed and configured prior to running the script: http://docs.aws.amazon.com/AWSEC2/latest/CommandLineReference/set-up-ec2-cli-linux.html
