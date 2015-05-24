@@ -9,7 +9,10 @@ Counts either httpd or apache2 (uncomment the service required) processes and:
  - Will restart the service based on the variable if over 100
 
 ### Running the Script
-1. In order to run the script, download the raw code and pipe it to Bash <pre> curl -L https://raw.githubusercontent.com/ryanmaclean/ProcessFun/master/httpdcount.sh | sudo bash</pre> 
+ - In order to run the script, download the raw code and pipe it to Bash:
+```
+curl -L https://raw.githubusercontent.com/ryanmaclean/ProcessFun/master/httpdcount.sh | sudo bash 
+```
 
 ### Resources
 If you'd like to make a similar script, or to fork and modify this for your own needs, here are the resources I used:
