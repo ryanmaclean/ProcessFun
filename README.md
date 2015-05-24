@@ -2,6 +2,8 @@
 
 ## HTTPd Count Shell Script (httpdcount.sh)
 
+*NB: This command should be run via sudo (or as root), otherwise the service restart command could fail.* 
+
 Counts either httpd or apache2 (uncomment the service required) processes and:
  - Prints messages to screen at counts of 1~10, 20~99 and 100+
  - Will restart the service based on the variable if over 100
