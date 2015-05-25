@@ -1,5 +1,14 @@
 # ProcessFun
 
+A collection of examples demonstrating ability with current systems, Git, Bash, Python and AWS. 
+
+File list:
+|File Name    | Purpose                                |
+|-------------|----------------------------------------|
+|awsinv.sh    |AWS Inventory Bash script               |
+|awsinvhtml.py|Python conversion to HTML for awsinv.sh |
+|httpdcount.sh|Count number of running Apache processes|
+
 ## HTTPd Count Shell Script (httpdcount.sh)
 
 *NB: This command should be run via sudo (or as root), otherwise the service restart command could fail.* 
