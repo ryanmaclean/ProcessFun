@@ -12,9 +12,15 @@ filename="aws.json"
 #Initialize the file
 : > $filename
 
+#Start new JSON data
+#echo "{ \"AWS Details\":[]">>$filename
+
 #Run the AWS CLI commands and concatenate contents of file
 aws ec2 describe-instances --region $region 1>>$filename
-aws elb describe-load-balancers --region $region 1>>$filename
-aws rds describe-db-instances --region $region 1>>$filename
-aws elasticache describe-cache-clusters --region $region 1>>$filename
-aws cloudformation describe-stacks --region $region 1>>$filename
+#aws elb describe-load-balancers --region $region 1>>$filename
+#aws rds describe-db-instances --region $region 1>>$filename
+#aws elasticache describe-cache-clusters --region $region 1>>$filename
+#aws cloudformation describe-stacks --region $region 1>>$filename
+
+#Close the AWS Details portion
+#echo "}">>$filename
