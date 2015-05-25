@@ -35,7 +35,7 @@ A simple script to check the inventory of the following in the "us-east-1" regio
 The results are output to a JSON file, then parsed by a script to create an HTML page.
 
 ### Requirements
-This script is built using the Amazon AWS CLI and uses Python/Ruby to output to the HTML file. You will need to have the command line tools installed and configured prior to running the script.
+This script is built using the Amazon AWS CLI and uses Python to output to the HTML file. You will need to have the command line tools installed and configured prior to running the script.
 
 ####Install the [AWS CLI] (http://aws.amazon.com/cli/)
 The easiest way is with Python pip:
