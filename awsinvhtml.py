@@ -1,17 +1,22 @@
 #!/usr/bin/python
-#import sys
+
+#Use subprocess to call Bash script
 import subprocess
+
+#Use JSON in order to parse Bash output
 import json
+
 #If we use json2html we'll need this
-from json2html import *
+#from json2html import *
+
+#In order to make things look nice, we use Pretty Print
 #from pprint import pprint
-#print "Enter a file name:",
-#filename = raw_input()
+
 print "Starting JSON Conversion to HTML"
 subprocess.call("./awsinv.sh", shell=True)
 
 #Read JSON File
-with open('/Users/ryanmaclean/ProcessFun/aws.json') as data_file:    
+with open('aws.json') as data_file:    
     data = json.load(data_file)
 #pprint(data)
 
@@ -33,5 +38,5 @@ f.close()
 print "Completed Conversion, HTML File Saved as aws.html"
 
 #Remove once tested
-print "Opening file with Safari to test"
+print "Opening file with Safari in order to test results"
 subprocess.call("open -a Safari aws.html", shell=True)
