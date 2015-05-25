@@ -62,6 +62,7 @@ Default output format [None]:
 
 ## Usage
 1. Download the raw awsinv.sh and awsinvhtml.py files to the same directory
-2. Make the awsinv.sh executable: <pre>chmod +x awsinv.sh</pre>
-3. Run the process using python: <pre>python aswinvhtml.py</pre>
-4. Open the resulting aws.html file in your web browser (or add some logic to rsync/scp the file to a webserver)
+2. If needed, edit the region in the awsinv.sh file as it is currently set to "us-east-1"
+3. Make the awsinv.sh executable: <pre>chmod +x awsinv.sh</pre>
+4. Run the process using python: <pre>python aswinvhtml.py</pre>
+5. Open the resulting aws.html file in your web browser (or add some logic to rsync/scp the file to a webserver)
