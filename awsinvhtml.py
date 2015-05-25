@@ -1,7 +1,9 @@
 #!/usr/bin/python
-import sys
+#import sys
 import subprocess
 import json
+#If we use json2html we'll need this
+from json2html import *
 #from pprint import pprint
 #print "Enter a file name:",
 #filename = raw_input()
@@ -9,7 +11,7 @@ print "Starting JSON Conversion to HTML"
 subprocess.call("./awsinv.sh", shell=True)
 
 #Read JSON File
-with open('/Users/string/Desktop/aws.json') as data_file:    
+with open('/Users/ryanmaclean/ProcessFun/aws.json') as data_file:    
     data = json.load(data_file)
 #pprint(data)
 
