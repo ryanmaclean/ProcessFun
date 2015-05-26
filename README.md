@@ -81,8 +81,6 @@ We'll use this to concatenate the various JSON files retrieved from Amazon. The 
 
 Quick and easy install:
 ```
-sudo su
-cd ~/bin
 curl -L https://github.com/trentm/json/raw/master/lib/json.js > json
 chmod 755 json
 ```
