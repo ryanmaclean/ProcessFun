@@ -47,6 +47,23 @@ The results are output to a JSON file, then parsed by a script to create an HTML
 ### Requirements
 This script is built using the Amazon AWS CLI and uses Python to output to the HTML file. You will need to have the command line tools installed and configured prior to running the script.
 
+Further, you will also need to have JSON2HTML and the "json" command line application installed in order to have better processing of the JSON files (otherwise, you'd be looking at a Python dict dump). 
+
+###Install JSON2HTML
+Installing JSON2HTML is a snap on a system with Python already setup:
+<pre>sudo pip install json2html</pre>
+
+###Install JSON Command Line Tool
+We'll use this to concatenate the various JSON files retrieved from Amazon. The install is straightforward: I've forked the repository in order to make sure we have a working version, but here's a link to [the source repository] (https://github.com/trentm/json)
+
+Quick and easy install:
+```
+sudo su
+cd ~/bin
+curl -L https://github.com/trentm/json/raw/master/lib/json.js > json
+chmod 755 json
+```
+
 ####Install the [AWS CLI] (http://aws.amazon.com/cli/)
 The easiest way is with Python pip:
 <pre>wget https://bootstrap.pypa.io/get-pip.py && sudo python get-pip.py</pre>
