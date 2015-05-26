@@ -112,7 +112,7 @@ We'll want to capture both the output as well as the errors, so we'll use "2>&1"
 <pre>./httpdcount.sh 2>&1 | logrotate -l httpdcount.%F 86400</pre>
 
 ###Streaming the Log with Logstash
-We'll send our logs from our server to a centralized location (we're using ElasticSearch Logstash Kibana for this example). In order to accomplish this on each node, we'll need to set up Logstash and a config file taylored to our script. 
+We'll send our logs from our server to a centralized location (we're using [ElasticSearch Logstash Kibana] (https://github.com/electronic-arts/opsworks-logstash-ea) for this example). In order to accomplish this on each node, we'll need to set up Logstash and a config file taylored to our script. 
 
 ####Logstash Install
 The Logstash install is quite straightforward. There's a [Logstash Chef recipe](https://github.com/lusis/chef-logstash), but to keep things simple:
