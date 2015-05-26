@@ -13,8 +13,15 @@ filename="aws.json"
 : > $filename
 
 #Run the AWS CLI commands and concatenate contents of file
-aws ec2 describe-instances --region $region 1>>$filename
-#aws elb describe-load-balancers --region $region 1>>$filename
-#aws rds describe-db-instances --region $region 1>>$filename
-#aws elasticache describe-cache-clusters --region $region 1>>$filename
-#aws cloudformation describe-stacks --region $region 1>>$filename
+aws ec2 describe-instances --region $region 1>>temp.json
+aws elb describe-load-balancers --region $region 1>>temp.json
+aws rds describe-db-instances --region $region 1>>temp.json
+aws elasticache describe-cache-clusters --region $region 1>>temp.json
+aws cloudformation describe-stacks --region $region 1>>temp.json
+#More commands can be added here at a later point if needed
+
+#Merge contents of aws.json to proper structure
+./json --merge -f temp.json > $filename
+
+#Clean up unstructured json file used
+rm -rf ./temp.json
