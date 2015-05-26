@@ -13,7 +13,7 @@ from json2html import *
 #from pprint import pprint
 
 print "Starting JSON Conversion to HTML"
-json_temp = subprocess.Popen(subprocess.call("./awsinv.sh", shell=True))
+json_temp = subprocess.Popen(['/bin/bash', './awsinv.sh'], stdout=subprocess.PIPE).communicate()[0]
 #json_temp = subprocess.Popen(['/bin/sh', 'ls'])
 #json.loads(json_temp)
 #Read JSON File
