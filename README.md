@@ -115,7 +115,7 @@ We'll want to capture both the output as well as the errors, so we'll use "2>&1"
 We'll send our logs from our server to a centralized location (we're using ElasticSearch Logstash Kibana for this example). In order to accomplish this on each node, we'll need to set up Logstash and a config file taylored to our script. 
 
 ####Logstash Install
-The Logstash install is quite straightforward. There's a [Chef recipe], but to keep things simple:
+The Logstash install is quite straightforward. There's a [Chef recipe](https://github.com/lusis/chef-logstash), but to keep things simple:
 
 1. Download [Logstash] (https://www.elastic.co/downloads/logstash) 
 <pre>curl -O https://download.elasticsearch.org/logstash/logstash/logstash-1.5.0.tar.gz</pre>
