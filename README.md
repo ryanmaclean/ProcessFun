@@ -95,3 +95,17 @@ chmod 755 json
 ##Resources
  - [Python Subprocess (Popen and running bash from Python)] (https://docs.python.org/2/library/subprocess.html)
 
+ #Bonus
+
+ We'll take the HTTPdcount.sh script and pipe it's output to a logfile that rotates. In this case, we're assuming logrotate is installed, but just in case, here's the install porcedure:
+ - Debian/Ubuntu:
+ <pre>sudo apt-get install logrotate</pre>
+ - RedHat/CentOS/Amazon Linux:
+ <pre>yum install logrotate</pre>
+ - MacOS:
+ <pre>brew install logrotate</pre>
+
+ ##Running the Script With a Rotating Log
+ We'll want to capture both the output as well as the errors, so we'll use "2>&1" as a parameter, and pipe the result to logrotate using the 86400 (60*60*24) option (every day):
+ <pre>./httpdcount.sh 2>&1 | logrotate -l httpdcount.%F 86400</pre>
+
