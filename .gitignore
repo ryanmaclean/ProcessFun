@@ -1,2 +1,3 @@
-*aws.json
-*aws.html
+*.json
+*.html
+*.DS_Store
