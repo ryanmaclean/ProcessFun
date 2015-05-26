@@ -126,3 +126,5 @@ The Logstash install is quite straightforward. There's a [Logstash Chef recipe](
 cd logstash-1.5.0
 bin/logstash -e 'input { stdin { } } output { stdout {} }'
 ```
+
+#WIP - TO BE CONTINUED!
