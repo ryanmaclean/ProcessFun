@@ -108,7 +108,7 @@ We'll take the HTTPdcount.sh script and pipe it's output to a logfile that rotat
 <pre>brew install logrotate</pre>
 
 ####The One-Liner
-We'll want to capture both the output as well as the errors, so we'll use "2>&1" as a parameter, and pipe the result to logrotate using the 86400 (60*60*24) option (every day):
+We'll want to capture both the output as well as the errors, so we'll use "2>&1" as a parameter, and pipe the result to logrotate using the 86400 (60x60x24) option (every day):
 <pre>./httpdcount.sh 2>&1 | logrotate -l httpdcount.%F 86400</pre>
 
 ###Streaming the Log with Logstash
