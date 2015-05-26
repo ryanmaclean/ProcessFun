@@ -115,6 +115,7 @@ We'll send our logs from our server to a centralized location (we're using Elast
 
 ####Logstash Forwarder Install
 The Logstash Forwarder install is quite straightforward. There's a [Chef recipe], but to keep things simple:
+
 1. Download [Logstash Forwarder] (https://www.elastic.co/downloads/logstash) 
 2. Extract the file
 3. Create a config file
