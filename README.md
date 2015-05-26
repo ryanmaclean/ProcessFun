@@ -76,7 +76,7 @@ Default output format [None]:
 Installing JSON2HTML is a snap on a system with Python already setup:
 <pre>sudo pip install json2html</pre>
 
-###Install JSON Command Line Tool
+####Install JSON Command Line Tool
 We'll use this to concatenate the various JSON files retrieved from Amazon. The install is straightforward: I've forked the repository in order to make sure we have a working version, but here's a link to [the source repository] (https://github.com/trentm/json)
 
 Quick and easy install:
@@ -85,27 +85,27 @@ curl -L https://github.com/trentm/json/raw/master/lib/json.js > json
 chmod 755 json
 ```
 
-## Usage
+###Usage
 1. Download the raw awsinv.sh and awsinvhtml.py files to the same directory
 2. If needed, edit the region in the awsinv.sh file as it is currently set to "us-east-1"
 3. Make the awsinv.sh executable: <pre>chmod +x awsinv.sh</pre>
 4. Run the process using python: <pre>python aswinvhtml.py</pre>
 5. Open the resulting aws.html file in your web browser (or add some logic to rsync/scp the file to a webserver)
 
-##Resources
+###Resources
  - [Python Subprocess (Popen and running bash from Python)] (https://docs.python.org/2/library/subprocess.html)
 
- #Bonus
+##Bonus
 
- We'll take the HTTPdcount.sh script and pipe it's output to a logfile that rotates. In this case, we're assuming logrotate is installed, but just in case, here's the install porcedure:
- - Debian/Ubuntu:
- <pre>sudo apt-get install logrotate</pre>
- - RedHat/CentOS/Amazon Linux:
- <pre>yum install logrotate</pre>
- - MacOS:
- <pre>brew install logrotate</pre>
+We'll take the HTTPdcount.sh script and pipe it's output to a logfile that rotates. In this case, we're assuming logrotate is installed, but just in case, here's the install porcedure:
+- Debian/Ubuntu:
+<pre>sudo apt-get install logrotate</pre>
+- RedHat/CentOS/Amazon Linux:
+<pre>yum install logrotate</pre>
+- MacOS:
+<pre>brew install logrotate</pre>
 
- ##Running the Script With a Rotating Log
- We'll want to capture both the output as well as the errors, so we'll use "2>&1" as a parameter, and pipe the result to logrotate using the 86400 (60*60*24) option (every day):
- <pre>./httpdcount.sh 2>&1 | logrotate -l httpdcount.%F 86400</pre>
+##Running the Script With a Rotating Log
+We'll want to capture both the output as well as the errors, so we'll use "2>&1" as a parameter, and pipe the result to logrotate using the 86400 (60*60*24) option (every day):
+<pre>./httpdcount.sh 2>&1 | logrotate -l httpdcount.%F 86400</pre>
 
