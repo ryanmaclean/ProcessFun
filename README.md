@@ -91,3 +91,7 @@ chmod 755 json
 3. Make the awsinv.sh executable: <pre>chmod +x awsinv.sh</pre>
 4. Run the process using python: <pre>python aswinvhtml.py</pre>
 5. Open the resulting aws.html file in your web browser (or add some logic to rsync/scp the file to a webserver)
+
+##Resources
+ - [Python Subprocess (Popen and running bash from Python)] (https://docs.python.org/2/library/subprocess.html)
+
