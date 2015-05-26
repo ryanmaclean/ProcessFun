@@ -9,6 +9,7 @@ File list:
 |awsinv.sh    |AWS Inventory Bash script               |
 |awsinvhtml.py|Python conversion to HTML for awsinv.sh |
 |httpdcount.sh|Count number of running Apache processes|
+|README.md    |This file - an overview of the contents |
 
 ## HTTPd Count Shell Script (httpdcount.sh)
 
@@ -113,12 +114,15 @@ We'll want to capture both the output as well as the errors, so we'll use "2>&1"
 ###Streaming the Log with Logstash
 We'll send our logs from our server to a centralized location (we're using ElasticSearch Logstash Kibana for this example). In order to accomplish this on each node, we'll need to set up Logstash and a config file taylored to our script. 
 
-####Logstash Forwarder Install
-The Logstash Forwarder install is quite straightforward. There's a [Chef recipe], but to keep things simple:
+####Logstash Install
+The Logstash install is quite straightforward. There's a [Chef recipe], but to keep things simple:
 
-1. Download [Logstash Forwarder] (https://www.elastic.co/downloads/logstash) 
+1. Download [Logstash] (https://www.elastic.co/downloads/logstash) 
+<pre>curl -O https://download.elasticsearch.org/logstash/logstash/logstash-1.5.0.tar.gz</pre>
 2. Extract the file
-3. Create a config file
-4. Run logstash-forwarder-config YOURCONFIGFILE.cfg
-
-####Creating Logstash Forwarder Config
+<pre>tar -zxvf logstash-1.5.0.tar.gz</pre>
+3. Run Logstash
+```
+cd logstash-1.5.0
+bin/logstash -e 'input { stdin { } } output { stdout {} }'
+```
