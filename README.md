@@ -97,7 +97,8 @@ chmod 755 json
 
 ##Bonus
 
-We'll take the HTTPdcount.sh script and pipe it's output to a logfile that rotates. In this case, we're assuming logrotate is installed, but just in case, here's the install porcedure:
+###Running the Script With a Rotating Log
+We'll take the HTTPdcount.sh script and pipe it's output to a logfile that rotates. In this case, we're assuming logrotate is installed, but just in case, here's the install procedure:
 - Debian/Ubuntu:
 <pre>sudo apt-get install logrotate</pre>
 - RedHat/CentOS/Amazon Linux:
@@ -105,7 +106,18 @@ We'll take the HTTPdcount.sh script and pipe it's output to a logfile that rotat
 - MacOS:
 <pre>brew install logrotate</pre>
 
-##Running the Script With a Rotating Log
+####The One-Liner
 We'll want to capture both the output as well as the errors, so we'll use "2>&1" as a parameter, and pipe the result to logrotate using the 86400 (60*60*24) option (every day):
 <pre>./httpdcount.sh 2>&1 | logrotate -l httpdcount.%F 86400</pre>
 
+###Streaming the Log with Logstash
+We'll send our logs from our server to a centralized location (we're using ElasticSearch Logstash Kibana for this example). In order to accomplish this on each node, we'll need to set up Logstash and a config file taylored to our script. 
+
+####Logstash Forwarder Install
+The Logstash Forwarder install is quite straightforward. There's a [Chef recipe], but to keep things simple:
+1. Download [Logstash Forwarder] (https://www.elastic.co/downloads/logstash) 
+2. Extract the file
+3. Create a config file
+4. Run logstash-forwarder-config YOURCONFIGFILE.cfg
+
+####Creating Logstash Forwarder Config
