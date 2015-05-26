@@ -45,3 +45,4 @@ fi
 
 #Display the text if set
 echo $display
+echo $restarttext
