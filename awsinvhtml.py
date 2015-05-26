@@ -50,6 +50,6 @@ f.close()
 #sys.stdout = open(filename, 'w')
 print "Completed Conversion, HTML File Saved as aws.html"
 
-#Remove once tested
-print "Opening file with Safari in order to test results"
-subprocess.call("open -a Safari aws.html", shell=True)
+#Used for testing
+#print "Opening file with Safari in order to test results"
+#subprocess.call("open -a Safari aws.html", shell=True)
