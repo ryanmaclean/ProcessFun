@@ -13,8 +13,9 @@ from json2html import *
 #from pprint import pprint
 
 print "Starting JSON Conversion to HTML"
-json_temp=subprocess.call("./awsinv.sh", shell=True)
-
+json_temp = subprocess.Popen(subprocess.call("./awsinv.sh", shell=True))
+#json_temp = subprocess.Popen(['/bin/sh', 'ls'])
+#json.loads(json_temp)
 #Read JSON File
 #with open('aws.json') as data_file:    
 #    data = json.load(data_file)
@@ -29,7 +30,7 @@ json_temp=subprocess.call("./awsinv.sh", shell=True)
 f = open('aws.html','w')
 message = """<html>
 <head></head>
-<body><p>AWS Details</p>"""+json2html.convert(json=json_temp)+"""</body>
+<body><p>AWS Details</p>"""+json2html.convert(json = json_temp)+"""</body>
 </html>"""
 f.write(message)
 f.close()
